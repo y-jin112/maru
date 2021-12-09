@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Source+Sans+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;800&family=Source+Sans+Pro:wght@600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, figure, p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.btn {
+  display: inline-block;
+  padding: 20px 150px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+  color: #fff;
+  background: #212224;
+}
+
+.thema {
+  background: #5eaeba;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 80px 0;
+  z-index: 9;
+  padding: 2% 0;
+}
+
+header > .head {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+header > .head a {
+  color: #212224;
+}
+
+header > .head h1 a {
+  font-size: 0;
+  background: url("img/h_logo.png") no-repeat;
+  width: 200px;
+  height: 36px;
+  display: block;
+}
+
+header > .head nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header > .head nav a {
+  margin: 0 8%;
+  position: relative;
+}
+
+header > .head nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 0;
+  border-bottom: 4px solid #5eaeba;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header > .head nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+header > .head .sub-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header > .head .sub-menu p {
+  padding: 0 20%;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 10% 15px;
+  background-color: #f3f3f3;
+}
+
+main .notice {
+  text-align: center;
+}
+
+main .notice h1 {
+  font-size: 3.5em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  color: #212224;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .notice p {
+  color: #9ba1ad;
+  font-size: 13pt;
+}
+
+main .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 50px;
+}
+
+main .button p {
+  margin: 0 50px;
+}
+
+main .notice2 {
+  position: relative;
+  background-color: #fff;
+  padding: 120px 180px;
+  max-width: 1580px;
+  margin: 0 auto;
+}
+
+main .notice2 .search {
+  text-align: center;
+  padding-bottom: 3%;
+}
+
+main .notice2 .search input {
+  font-size: 1.5rem;
+  width: 325px;
+  padding: 10px;
+  border: 0;
+  outline: none;
+}
+
+main .notice2 .search button {
+  width: 50px;
+  height: 40px;
+  border: 0;
+  background-image: url("img/magnifying_icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+main .table {
+  border-top: 1px solid #212224;
+  width: 100%;
+}
+
+main .table tbody tr td {
+  padding: 2%;
+  border-bottom: 1px solid #9ba1ad;
+  font-family: sans-serif;
+  color: #9ba1ad;
+}
+
+main .table tbody tr td a {
+  color: #9ba1ad;
+}
+
+main .table tbody tr td a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #aacfd8;
+  padding: 2% 0;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.footer .company {
+  margin: 0 auto 0 5%;
+}
+
+.footer .company span {
+  font-size: 9pt;
+}
+
+.footer .company p {
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.footer .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .icon p {
+  padding: 0 5%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+/*# sourceMappingURL=sub.css.map */
