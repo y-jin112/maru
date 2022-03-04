@@ -70,86 +70,82 @@ header{
             p{
                 padding: 0 20%;
             }
+            p:nth-of-type(3){
+                display: inline-block;
+            }
         }
     }
 }
 
-.slider{
-    width: 100%; height:100vh;
-    // 전체적으로 잡을때 px로 잡지 않고 %로 잡기 안그러면 줄이고 확대할때 깨짐
+
+
+.swiper {
+    width: 100%;
+    height: 100vh;
     position: relative;
-    margin: 0 auto;
-    overflow: hidden;
+}
 
-    input[type=radio]{
-        display: none;
-    }
-    .imgs{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        position:relative;
-        li{
-            position: absolute;
-            padding: 0;
-            margin: 0;
-            width:100%; height:100vh;
-            img{width:100%;}
-        }
-    }
-    .bullets{
-        position: absolute;
-        left: 50%; bottom: 50px;
-        transform: translateX(-50%);
-        // z-index: 1;
-        
-        label{
-            display: inline-block;
-            border-radius: 50%;
-            background-color: #7d7f81;
-            width: 10px;
-            height: 10px;
-            cursor: pointer;
-            margin: 0 10px;
-        }
-    }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
-    input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(5):checked~.bullets>label:nth-child(4){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(6):checked~.bullets>label:nth-child(4){
-        background-color: #fff;
-    }
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
 
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet{
+    /* 인디게이터 원 모양 */
+    
+}
+.swiper-pagination-bullet-active{
+    /* 인디게이터 백그라운더 컬러 (활성화 모양) */
+    background-color: #5eaeba;
 }
 
 .txt{
     background: url('img/main_bg.png') no-repeat;
-    min-height: 500px;
+    min-height: 600px;
     
     text-align: center;
-    padding: 160px;
+    padding: 0 160px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     h2{
-        font-size: 3.2rem;
-        margin-bottom:3%;
+        font-size: 3.2rem;        
+        opacity:0;
+        color: #212224;  
     }
     small{
         font-size: 20px;
+        opacity:0;
+        margin-top: 30px;
+        color: #9ba1ad;
     }
     p{
         margin: 50px;
+        opacity:0;  
         a{
             color: #fff;
             background: #212224;
@@ -157,20 +153,37 @@ header{
             padding:10px 30px;
         }
     }
-}
-.slide-wrap{
-    width:100%; overflow: hidden;
-}
-.imgs2 {
-    display: flex;
-    li{
-        width:20%;
-        flex-shrink: 0;
-        img{
-            width:100%;
-        opacity: 0.8;
+    &.active{
+        h2{animation: txt 1s forwards;}
+        small{animation: txt 1s 0.5s forwards;}
+        p{animation: txt 1s 1s forwards;}
+    }
+    @keyframes txt {
+        0%{
+            transform: translateY(100%);
+        }
+        100%{
+            opacity:1;
+            transform: translateY(0%);
         }
     }
+}
+
+
+.mySwiper2 {
+    width: 800px;
+  
+  .swiper-slide {
+    height: 300px;
+    background: #882525;
+    line-height: 300px;
+    text-align: center;
+    display: flex;
+    img{
+        width:100%;
+    opacity: 0.8;
+    }
+  }
 }
 
 .notice {
