@@ -5,7 +5,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: sans-serif;
 }
 
 body {
@@ -57,7 +57,7 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  padding: 80px 0;
+  padding: 40px 0;
   z-index: 9;
 }
 
@@ -162,68 +162,43 @@ header > .head .sub-menu p:nth-of-type(3) {
   display: inline-block;
 }
 
-/*
-.slider{
-    width: 100%; height:100vh;
-    // 전체적으로 잡을때 px로 잡지 않고 %로 잡기 안그러면 줄이고 확대할때 깨짐
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
-
-    input[type=radio]{
-         display: none;
-    }
-    .imgs{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        position:relative;
-        li{
-            position: absolute;
-            padding: 0;
-            margin: 0;
-            width:100%; height:100vh;
-            img{width:100%;}
-        }
-    }
-    .bullets{
-        position: absolute;
-        left: 50%; bottom: 50px;
-        transform: translateX(-50%);
-        // z-index: 1;
-        
-        label{
-            display: inline-block;
-            border-radius: 50%;
-            background-color: #7d7f81;
-            width: 10px;
-            height: 10px;
-            cursor: pointer;
-            margin: 0 10px;
-        }
-    }
-
-    input[type=radio]:nth-child(1):checked~.bullets>label:nth-child(1){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(2):checked~.bullets>label:nth-child(2){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(3):checked~.bullets>label:nth-child(3){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(4):checked~.bullets>label:nth-child(4){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(5):checked~.bullets>label:nth-child(4){
-        background-color: #fff;
-    }
-    input[type=radio]:nth-child(6):checked~.bullets>label:nth-child(4){
-        background-color: #fff;
-    }
-
+.swiper-button-next {
+  background-position: center;
+  margin-right: 300px;
 }
-*/
+
+.swiper-button-next img {
+  width: 100px;
+  height: 70px;
+  margin-left: 20px;
+}
+
+.swiper-button-next .next_text {
+  color: #5eaeba;
+  font-size: 1.5rem;
+}
+
+.swiper-button-prev {
+  background-position: center;
+  margin-left: 300px;
+}
+
+.swiper-button-prev img {
+  width: 100px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.swiper-button-prev .prev_text {
+  color: #5eaeba;
+  font-size: 1.5rem;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
 .swiper {
   width: 100%;
   height: 100vh;
@@ -347,22 +322,29 @@ header > .head .sub-menu p:nth-of-type(3) {
   }
 }
 
+.prev_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .mySwiper2 {
-  width: 800px;
+  overflow: hidden;
 }
 
 .mySwiper2 .swiper-slide {
-  height: 300px;
   background: #882525;
   line-height: 300px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 .mySwiper2 .swiper-slide img {
-  width: 100%;
+  width: 450px;
+  height: 300px;
   opacity: 0.8;
 }
 

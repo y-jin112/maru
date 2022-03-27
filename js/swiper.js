@@ -11,21 +11,32 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 1,
       loop: true,
       pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+        el: ".swiper-pagination"
       },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      }
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // autoplay: {
+      //   delay: 2500,
+      //   disableOnInteraction: false,
+      // }
 });
 
 
 var swiper2 = new Swiper(".mySwiper2", {
       loop: true,
-      slidesPerView: 3
-      
-    });
+        slidesPerView: 5,
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        }
+      });
 // const elmag = document.querySelector('.sub-menu > p:nth-of-type(3)');
 // function mag_click(){
 //   (display : block)
