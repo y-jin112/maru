@@ -162,78 +162,72 @@ header > .head .sub-menu p:nth-of-type(3) {
   display: inline-block;
 }
 
-.swiper-button-next {
-  background-position: center;
-  margin-right: 300px;
-}
-
-.swiper-button-next img {
-  width: 100px;
-  height: 70px;
-  margin-left: 20px;
-}
-
-.swiper-button-next .next_text {
-  color: #5eaeba;
-  font-size: 1.5rem;
-}
-
-.swiper-button-prev {
-  background-position: center;
-  margin-left: 300px;
-}
-
-.swiper-button-prev img {
-  width: 100px;
-  height: 70px;
-  margin-right: 20px;
-}
-
-.swiper-button-prev .prev_text {
-  color: #5eaeba;
-  font-size: 1.5rem;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  display: none;
-}
-
 .swiper {
   width: 100%;
   height: 100vh;
   position: relative;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+.swiper .swiper-button-prev {
+  background-position: center;
+  position: absolute;
+  left: 12%;
 }
 
-.swiper-slide img {
+.swiper .swiper-button-prev img {
+  width: 100px;
+  height: 70px;
+  margin-right: 20px;
+}
+
+.swiper .swiper-button-prev .prev_text {
+  font-size: 1.5rem;
+  color: #5eaeba;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.swiper .swiper-button-next {
+  background-position: center;
+  position: absolute;
+  right: 10%;
+}
+
+.swiper .swiper-button-next img {
+  width: 100px;
+  height: 70px;
+  margin-left: 20px;
+}
+
+.swiper .swiper-button-next .next_text {
+  color: #212224;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 50px;
+  color: #5eaeba;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  display: none;
+}
+
+.swiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  margin: auto;
 }
 
-.swiper-pagination-bullet {
+.swiper .swiper-pagination-bullet {
   /* 인디게이터 원 모양 */
 }
 
-.swiper-pagination-bullet-active {
+.swiper .swiper-pagination-bullet-active {
   /* 인디게이터 백그라운더 컬러 (활성화 모양) */
   background-color: #5eaeba;
 }
@@ -320,12 +314,6 @@ header > .head .sub-menu p:nth-of-type(3) {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
-}
-
-.prev_text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .mySwiper2 {
@@ -448,7 +436,7 @@ footer {
           transform: scale(0.8);
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 1430px) {
   header {
     position: fixed;
     left: 0;
@@ -484,7 +472,6 @@ footer {
     background: url("img/h_logo.png") no-repeat;
     width: 200px;
     height: 36px;
-    display: block;
   }
   header > .head nav {
     display: none;
@@ -495,6 +482,7 @@ footer {
   header > .head nav a {
     margin: 0 8%;
     position: relative;
+    display: block;
   }
   header > .head nav a::after {
     content: '';
@@ -537,68 +525,35 @@ footer {
   header > .head .sub-menu p {
     padding: 0 20%;
   }
-  .slider {
+  .swiper .swiper-slide img {
+    display: block;
     width: 100%;
-    height: 100vh;
-    position: relative;
-    margin: 0 auto;
-    overflow: hidden;
+    height: 100%;
+    margin: auto;
   }
-  .slider input[type=radio] {
+  .swiper .swiper-button-next {
+    background-position: center;
+    margin-right: 30px;
+  }
+  .swiper .swiper-button-next img {
+    width: 80px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  .swiper .swiper-button-next .next_text {
     display: none;
   }
-  .slider .imgs {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
+  .swiper .swiper-button-prev {
+    background-position: center;
+    margin-left: 30px;
   }
-  .slider .imgs li {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 100vh;
+  .swiper .swiper-button-prev img {
+    width: 80px;
+    height: 50px;
+    margin-right: 10px;
   }
-  .slider .imgs li img {
-    width: auto;
-    height: 100%;
-    -webkit-transform: translate(-30%, 0px);
-            transform: translate(-30%, 0px);
-  }
-  .slider .bullets {
-    position: absolute;
-    left: 50%;
-    bottom: 50px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  .slider .bullets label {
-    display: inline-block;
-    border-radius: 50%;
-    background-color: #7d7f81;
-    width: 5px;
-    height: 5px;
-    cursor: pointer;
-    margin: 0 3px;
-  }
-  .slider input[type=radio]:nth-child(1):checked ~ .bullets > label:nth-child(1) {
-    background-color: #fff;
-  }
-  .slider input[type=radio]:nth-child(2):checked ~ .bullets > label:nth-child(2) {
-    background-color: #fff;
-  }
-  .slider input[type=radio]:nth-child(3):checked ~ .bullets > label:nth-child(3) {
-    background-color: #fff;
-  }
-  .slider input[type=radio]:nth-child(4):checked ~ .bullets > label:nth-child(4) {
-    background-color: #fff;
-  }
-  .slider input[type=radio]:nth-child(5):checked ~ .bullets > label:nth-child(4) {
-    background-color: #fff;
-  }
-  .slider input[type=radio]:nth-child(6):checked ~ .bullets > label:nth-child(4) {
-    background-color: #fff;
+  .swiper .swiper-button-prev .prev_text {
+    display: none;
   }
   .txt {
     background: url("img/main_bg.png") no-repeat;
@@ -623,30 +578,6 @@ footer {
     background: #212224;
     display: inline-block;
     padding: 8px 20px;
-  }
-  .slide-wrap {
-    width: 100%;
-    overflow: hidden;
-  }
-  .imgs2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .imgs2 li {
-    width: 50%;
-    -ms-flex-negative: 0;
-        flex-shrink: 0;
-  }
-  .imgs2 li img {
-    width: 100%;
-    opacity: 0.8;
   }
   .notice {
     display: -webkit-box;

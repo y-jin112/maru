@@ -1,0 +1,287 @@
+@import '_common';
+body{
+    box-sizing: border-box;
+}
+$p-tb100 : 100px 0;
+@mixin flex($jc,$ai,$fd,$fw) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+    flex-wrap: $fw;
+
+    // @include flex(space-between, flex-start, row, nowrap);
+}
+//#aacfd8;
+
+header{
+    position: fixed;
+    left:0; top:0;
+    width: 100%;
+    padding: 40px 0;
+    z-index: 9;
+
+
+    >.head{
+        width: 80%;
+        margin: 0 auto;
+        @include flex(space-between, center, row, nowrap);
+        a{color: #212224; }
+        h1{
+            a{
+                font-size: 0;
+                background: url('img/h_logo.png') no-repeat;
+                width: 200px; height: 36px;
+                display: block;
+            }
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            a{
+                margin: 0 8%;
+                position: relative;
+            }
+            a::after{
+                content: '';
+                position: absolute; bottom:0%; left:0;
+                width:0;
+                border-bottom: 4px solid #5eaeba;
+                transition: .5s;
+            }
+            a:hover::after{
+                width: 100%; left:0;
+            }
+        }
+        .trigger-menu{
+            position: relative;
+            width: 24px; height: 20px;
+            display: none;
+            span{
+                position: absolute;
+                left:0; top:50%;
+                width: 100%; 
+                border-top: 2px solid #212224;
+            }
+            span:nth-of-type(1){transform: translateY(-300%);}
+            span:nth-of-type(2){}
+            span:nth-of-type(3){transform: translateY(300%);}
+        }
+        .sub-menu{
+            display: flex;
+            p{
+                padding: 0 20%;
+            }
+        }
+    }
+}
+
+.main{
+    width: 100%; height: 100%;
+    position: relative;
+    padding: 10% 15px 1%;
+    background-color:#f3f3f3;
+
+    .notice{
+        text-align:center;
+        h1{
+            font-size: 3.5em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: normal;
+            color: #212224;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            color: #9ba1ad;
+            font-size: 20px;
+            font-weight: 300;
+        }
+        .button{
+            display: flex;
+            justify-content: center;
+            margin-bottom:50px;
+            p{
+                margin:0 50px;
+            }
+        }
+    }
+    
+    .sub_container{
+        width: 100%;
+        margin: 80px auto;
+        padding: 120px 180px;
+        border-radius: 20px;
+        padding: 120px 170px;
+        background: #fff;
+        font-family: 'Noto Sans KR',sans-serif;
+        font-weight: 100;
+
+        .com_sec_parah{
+            text-align: center;
+            letter-spacing: -2px;
+
+            .big_p{
+                font-size: 60px;
+                color: #212224;
+                padding-bottom: 30px;
+                .color_mint{
+                    color: #5eaeba;
+                }
+            }
+            .small_p{
+                font-size: 20px;
+                color: #9ba1ad;
+                letter-spacing: -1px;
+            }
+        }
+        
+        .com_sec_logo{
+            width: 100%;
+            padding: 65px;
+            background: #f7f8fa;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 17px;
+            img{
+                
+                font-size: 1em;
+            }
+        }
+
+        .wide_lh{
+            letter-spacing: -1px;
+            line-height: 2.2;
+            color: #9ba1ad;
+            text-align: center;
+            font-size: 20px;
+            
+            p{
+
+            }
+            .color_black{
+                color: #212224;
+            }
+            .color_mint{
+                color: #5eaeba;
+            }
+        }
+
+        .sub_sec{
+            display: flex;
+            .sub_sec_title{
+                width: 50%;
+                margin: 100px;
+                h1::before {
+                    content: '';
+                    display: block;
+                    width: 30px;
+                    border-top: solid 5px #5eaeba;
+                }
+                h1 {
+                    font-size: 2.8em;
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .com_circle_wrap{
+            text-align: center;
+            display: inline-block;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+            .com_circle{
+                box-sizing: border-box;
+                width: 300px;
+                height: 300px;
+                padding: 80px 10px;
+                font-size: 25px;
+                font-weight: 100;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+                box-sizing: border-box;
+                
+                .text_area{
+                    color: #fff;
+                    font-size: 22px;
+                }
+            }
+            .com_circle01{
+                background: url(./img/about_icon_bg01.png) no-repeat center 0;
+                background-size: 100% auto;
+                opacity: .9;
+                position: relative;
+                object-fit: cover;
+                left: 60px;
+                img{
+                    margin-bottom: 20px;
+                }
+            }
+            .com_circle02{
+                background: url(./img/about_icon_bg02.png) no-repeat center 0;
+                background-size: 100% auto;
+                opacity: .9;
+                position: relative;
+                left: 30px;
+                img{
+                    margin-bottom: 20px;
+                }
+            }
+            .com_circle03{
+                background: url(./img/about_icon_bg03.png) no-repeat center 0;
+                background-size: 100% auto;
+                
+                img{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background-color:#aacfd8;
+    padding:2% 0;
+}
+.footer{
+    
+    @include flex(space-between, flex-start, row, nowrap);
+    margin: 0 auto;
+    width: 80%;
+    .company{
+        margin:0 auto 0 5%;
+        span{
+            font-size: 9pt;
+        }
+        p{
+            font-size: 9pt;
+            font-weight: bold;
+
+        }
+    }
+    .icon{
+        display: flex;
+        p{
+            padding: 0 5%;
+            
+            transform: scale(0.8);
+        }
+    }
+}

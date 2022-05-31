@@ -51,6 +51,11 @@ table {
   background: #212224;
 }
 
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 header {
   position: fixed;
   left: 0;
@@ -157,35 +162,39 @@ header > .head .sub-menu p {
   padding: 0 20%;
 }
 
-main {
+.main {
   width: 100%;
+  height: 100%;
   position: relative;
-  padding: 10% 15px;
+  padding: 10% 15px 1%;
   background-color: #f3f3f3;
 }
 
-main .notice {
+.main .notice {
   text-align: center;
 }
 
-main .notice h1 {
+.main .notice h1 {
   font-size: 3.5em;
   font-family: 'Montserrat', sans-serif;
   font-weight: normal;
   color: #212224;
   margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-main .notice p {
+.main .notice p {
   color: #9ba1ad;
   font-size: 20px;
   font-weight: 300;
 }
 
-main .button {
+.main .notice .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,94 +204,159 @@ main .button {
   margin-bottom: 50px;
 }
 
-main .button .btn {
-  padding: 13px 120px;
-  font-size: 1em;
-}
-
-main .button p {
+.main .notice .button p {
   margin: 0 50px;
 }
 
-main .list-wrap {
-  max-width: 1200px;
+.main .sub_container {
+  width: 100%;
+  margin: 80px auto;
+  padding: 120px 180px;
+  border-radius: 20px;
+  padding: 120px 170px;
+  background: #fff;
+  font-family: 'Noto Sans KR',sans-serif;
+  font-weight: 100;
+}
+
+.main .sub_container .com_sec_parah {
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+.main .sub_container .com_sec_parah .big_p {
+  font-size: 60px;
+  color: #212224;
+  padding-bottom: 30px;
+}
+
+.main .sub_container .com_sec_parah .big_p .color_mint {
+  color: #5eaeba;
+}
+
+.main .sub_container .com_sec_parah .small_p {
+  font-size: 20px;
+  color: #9ba1ad;
+  letter-spacing: -1px;
+}
+
+.main .sub_container .com_sec_logo {
+  width: 100%;
+  padding: 65px;
+  background: #f7f8fa;
+  text-align: center;
+  margin: 60px 0;
+  border-radius: 17px;
+}
+
+.main .sub_container .com_sec_logo img {
+  font-size: 1em;
+}
+
+.main .sub_container .wide_lh {
+  letter-spacing: -1px;
+  line-height: 2.2;
+  color: #9ba1ad;
+  text-align: center;
+  font-size: 20px;
+}
+
+.main .sub_container .wide_lh .color_black {
+  color: #212224;
+}
+
+.main .sub_container .wide_lh .color_mint {
+  color: #5eaeba;
+}
+
+.main .sub_container .sub_sec {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 10px;
 }
 
-main .list-wrap .component {
-  position: relative;
-  margin-top: 30px;
+.main .sub_container .sub_sec .sub_sec_title {
+  width: 50%;
+  margin: 100px;
 }
 
-main .list-wrap .component h3 {
-  padding: 10px;
-  text-align: start;
-}
-
-main .list-wrap .component .p1 {
-  position: absolute;
-  top: 30%;
-  left: 0;
-  z-index: 2;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  text-align: center;
-  width: 100%;
-  color: #fff;
-  font-size: 30px;
-  font-weight: 200;
-  font-family: 'Montserrat', sans-serif;
-}
-
-main .list-wrap .component .p2 {
-  font-size: 14px;
-  color: #9ba1ad;
-  line-height: 25px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: start;
-}
-
-main .list-wrap .component img {
-  max-width: 100%;
+.main .sub_container .sub_sec .sub_sec_title h1::before {
+  content: '';
   display: block;
-  opacity: 50%;
-  border-radius: 10px;
+  width: 30px;
+  border-top: solid 5px #5eaeba;
 }
 
-main .list-wrap .component .description {
+.main .sub_container .sub_sec .sub_sec_title h1 {
+  font-size: 2.8em;
+  font-weight: 100;
+}
+
+.main .sub_container .com_circle_wrap {
   text-align: center;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  background-color: #ffffff;
+  display: inline-block;
+  margin: 0 auto;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .list-wrap .component .description .btn {
-  padding: 8 37px;
-  margin: 15px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: .7em;
+.main .sub_container .com_circle_wrap .com_circle {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  padding: 80px 10px;
+  font-size: 25px;
+  font-weight: 100;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
 }
 
-main .list-wrap .component .description h3 {
-  margin: 0;
-  font-size: 1.3rem;
-  line-height: 1.5;
-  font-weight: 700;
+.main .sub_container .com_circle_wrap .com_circle .text_area {
+  color: #fff;
+  font-size: 22px;
+}
+
+.main .sub_container .com_circle_wrap .com_circle01 {
+  background: url(./img/about_icon_bg01.png) no-repeat center 0;
+  background-size: 100% auto;
+  opacity: .9;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 60px;
+}
+
+.main .sub_container .com_circle_wrap .com_circle01 img {
+  margin-bottom: 20px;
+}
+
+.main .sub_container .com_circle_wrap .com_circle02 {
+  background: url(./img/about_icon_bg02.png) no-repeat center 0;
+  background-size: 100% auto;
+  opacity: .9;
+  position: relative;
+  left: 30px;
+}
+
+.main .sub_container .com_circle_wrap .com_circle02 img {
+  margin-bottom: 20px;
+}
+
+.main .sub_container .com_circle_wrap .com_circle03 {
+  background: url(./img/about_icon_bg03.png) no-repeat center 0;
+  background-size: 100% auto;
+}
+
+.main .sub_container .com_circle_wrap .com_circle03 img {
+  margin-bottom: 20px;
 }
 
 footer {
@@ -334,20 +408,4 @@ footer {
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
-
-@media (min-width: 480px) {
-  .component {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(50% - 1rem);
-            flex: 0 0 calc(50% - 1rem);
-  }
-}
-
-@media (min-width: 768px) {
-  .component {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 calc(33.3% - 1rem);
-            flex: 0 0 calc(33.3% - 1rem);
-  }
-}
-/*# sourceMappingURL=artist.css.map */
+/*# sourceMappingURL=company.css.map */
